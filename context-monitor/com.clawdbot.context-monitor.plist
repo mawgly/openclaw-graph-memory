@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.clawdbot.context-monitor</string>
+    
+    <key>ProgramArguments</key>
+    <array>
+        <string>/bin/bash</string>
+        <string>${HOME}/.clawdbot/scripts/context-monitor.sh</string>
+    </array>
+    
+    <!-- Run every 15 seconds -->
+    <key>StartInterval</key>
+    <integer>15</integer>
+    
+    <!-- Start at login -->
+    <key>RunAtLoad</key>
+    <true/>
+    
+    <!-- Environment variables for secrets -->
+    <key>EnvironmentVariables</key>
+    <dict>
+        <key>TELEGRAM_BOT_TOKEN</key>
+        <string>your_bot_token_here</string>
+        <key>TELEGRAM_CHAT_ID</key>
+        <string>your_chat_id_here</string>
+        <key>CONTEXT_THRESHOLD</key>
+        <string>80</string>
+    </dict>
+    
+    <key>StandardOutPath</key>
+    <string>${HOME}/.clawdbot/logs/context-monitor.log</string>
+    
+    <key>StandardErrorPath</key>
+    <string>${HOME}/.clawdbot/logs/context-monitor.error.log</string>
+</dict>
+</plist>

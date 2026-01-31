@@ -150,6 +150,18 @@ Example:
 3. Check active sub-agents and terminals
 4. Brief report to human
 
+## Bonus: Context Monitor (Telegram Alerts)
+
+Get Telegram alerts when context window fills up — so you can save context before session reload.
+
+**See [context-monitor/README.md](context-monitor/README.md) for installation.**
+
+```
+⚠️ Clawdbot Context Alert: 82% — session reload recommended
+```
+
+Works via macOS LaunchAgent, checks every 15 seconds.
+
 ## Optional: qmd for Full-Text Search
 
 For fallback searching through session transcripts:
