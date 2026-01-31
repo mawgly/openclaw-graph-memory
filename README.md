@@ -1,6 +1,6 @@
-# Graphiti Memory Plugin for Clawdbot
+# OpenClaw Graph Memory
 
-🧠 **Persistent memory for AI agents using Graphiti Knowledge Graph**
+🧠 **Persistent memory for OpenClaw/Clawdbot agents using Graphiti Knowledge Graph**
 
 Solves the #1 problem for AI agents: **memory loss after context compression**.
 
