@@ -1,0 +1,43 @@
+{
+  "id": "graphiti-memory",
+  "name": "Graphiti Auto-Memory",
+  "version": "1.0.0",
+  "description": "Automatic memory injection and extraction using Graphiti knowledge graph",
+  "author": "BetaVibe",
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "enabled": {
+        "type": "boolean",
+        "default": true
+      },
+      "searchLimit": {
+        "type": "number",
+        "default": 5,
+        "description": "Max results to inject from memory search"
+      },
+      "minScore": {
+        "type": "number",
+        "default": 0.5,
+        "description": "Minimum relevance score for search results"
+      },
+      "autoExtract": {
+        "type": "boolean",
+        "default": true,
+        "description": "Automatically extract and save facts from messages"
+      },
+      "groupId": {
+        "type": "string",
+        "default": "main",
+        "description": "Graphiti group for memory storage"
+      }
+    }
+  },
+  "uiHints": {
+    "enabled": { "label": "Enable Auto-Memory" },
+    "searchLimit": { "label": "Search Results Limit" },
+    "minScore": { "label": "Minimum Relevance Score" },
+    "autoExtract": { "label": "Auto-Extract Facts" },
+    "groupId": { "label": "Memory Group ID" }
+  }
+}

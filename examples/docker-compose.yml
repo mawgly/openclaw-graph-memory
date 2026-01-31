@@ -1,0 +1,27 @@
+# FalkorDB + Graphiti MCP Docker Compose
+# Run: docker compose up -d
+
+version: '3.8'
+services:
+  falkordb:
+    image: falkordb/falkordb:latest
+    ports:
+      - "6379:6379"   # Redis protocol
+      - "3000:3000"   # Web UI
+    volumes:
+      - falkordb_data:/data
+    restart: unless-stopped
+
+  graphiti-mcp:
+    image: zepai/graphiti-mcp:latest
+    ports:
+      - "8000:8000"   # MCP server
+    environment:
+      - NEO4J_URI=bolt://falkordb:6379
+      - OPENAI_API_KEY=${OPENAI_API_KEY}  # Required for entity extraction
+    depends_on:
+      - falkordb
+    restart: unless-stopped
+
+volumes:
+  falkordb_data:

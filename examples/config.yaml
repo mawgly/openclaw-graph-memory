@@ -1,0 +1,19 @@
+# Example Clawdbot config with graphiti-memory plugin
+# Add this to your ~/.clawdbot/config.yaml
+
+plugins:
+  entries:
+    graphiti-memory:
+      enabled: true
+      config:
+        # Enable/disable the plugin
+        enabled: true
+        
+        # How many entities to inject into context
+        searchLimit: 10
+        
+        # Auto-save all messages to Graphiti
+        autoExtract: true
+        
+        # Graphiti group ID (use different groups for different agents)
+        groupId: main
